@@ -15,6 +15,8 @@ p{
 header{
     background-color: rgb(185, 233, 255);
     padding: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -28,8 +30,8 @@ h1{
 }
 
 ul {
-    display: flex;
-    flex-direction: column; 
+    /* display: flex;
+    flex-direction: column;  */
     text-align: center;
     line-height: 1.5em;
 }
@@ -209,9 +211,44 @@ h2{
     box-shadow: 0px 0px 20px 0px rgb(185, 233, 255);
 }
 
-/* .2020videos iframe{
-    display: flex;
-} */
+form {
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+  }
+
+input {
+    width: 50%;
+    padding: 10px;
+    justify-content: center;
+    font-family: 'Josefin Sans', sans-serif;  
+  }
+
+  label{
+     line-height: 1.25;
+  }
+textarea{
+    font-family: 'Josefin Sans', sans-serif; 
+    width: 50%;
+}
+input[type=submit] {
+    background-color: white;
+    color: black;
+    margin: 5px;
+    /* padding: 14px 20px;
+    margin: 8px 0; */
+    cursor: pointer;
+    width: 25%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px white;
+  }
+
+  h1{
+    animation-name: movelogo;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    
+}
+
 
  
 /* .smallGroup{
@@ -219,17 +256,6 @@ h2{
     border: solid 3px black;
 } */
 
-
-
-
-
-/* .Talia{
-    justify-content: center;
-} */
-
-/* .contact_main{
-    background-image: url("../images/backstage-bw.jpeg");
-} */
 @keyframes movelogo {
     from{
         /* width: 500px; */
@@ -244,7 +270,7 @@ h2{
 @media all and (min-width:768px){ 
 
     ul {
-    flex-direction: row; 
+    display: flex;
     justify-content: space-around;
     }
 
@@ -272,14 +298,9 @@ h2{
         width: 100%;
     }
 
-    h1{
-        animation-name: movelogo;
-        animation-duration: 4s;
-        animation-iteration-count: 1;
-        
-    }
+    
 
-    .joinUsImages{
+    .aboutUsText img{
         width: 50%;
         margin: 0 auto;
     }
@@ -289,19 +310,54 @@ h2{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr
 } */
+    .aboutUsText{
+        background-image: url("../images/backstage-bw.jpeg");
+        background-attachment: fixed; 
+        background-position: center;
+        background-size: cover; 
+        background-repeat: no-repeat;
+        
+    }
 
+    .aboutUsText p {
+        color: black;
+        background-color:rgba(255, 255, 255, .85);
+        width: 50%;
+        margin: 0 auto;
+    }
 }
 
 
 @media all and (min-width:1200px){
     /* still figuring out what to do with desktop view flex nav */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    nav{
+        width: 50%;
+        align-self: center;
+    }
+
     h1{
         text-align: left;
+    }
+    
+    
+      .grid-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        width: 97%;
+        margin: auto;
+        grid-gap: 15px;
+    }
+
+    .Talia{
+        grid-column: 3 / span 1;
+        width: 100%;
         
     }
-    ul {
-        justify-content: space-around;
-    }
+    
 }
 
 @media screen and (prefers-reduced-motion: reduce){
@@ -310,4 +366,7 @@ h2{
         animation: none;
     }
 
+    .aboutUsText{
+        background-attachment: initial;
+      }
 }
