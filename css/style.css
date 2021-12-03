@@ -126,40 +126,10 @@ footer{
     text-align: center;
 /* } */
 
-.introPage{
-    display: grid;
-    /* position: relative; */
-    text-align: center;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-row-gap: 10px;
-} 
-
-.smallGroup{
-    grid-column: 1/ -1;
-    max-height: 700px;
-    overflow: hidden;
-    grid-row: 1 /  -1;  
-}
-
-/* .smallGroup img{
-    align-self: center;
-} */
 .aboutCadence{
-    /* position: absolute;
-    margin: 0 auto; */
-    background-color: rgba(255, 255, 255, .85);
-    padding: 30px;
-    color: black;
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 1;
-    align-self: center;
-    border-radius: 10px;;
-}  
- .about2{
-    grid-column: 2/span 1;
     border: solid white 2px;
     border-radius: 10px;
- }
+}
 
 
 h2{
@@ -185,16 +155,36 @@ h2{
 
 .videos2021{
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
 }
 
 .resolution{
-    grid-column: 1 / -1;
+    grid-column: 1 / span 1;
     grid-row: 1 / span 1;
 }
 .resolutionCaption{
+    grid-column: 1 / span 1;
+    grid-row: 1/ span 1;
+    align-self: center;
+}
+
+.dirtyafs{
     grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+.dirtyAFCaption{
+    grid-column: 2 / span 1;
+    grid-row: 1/ span 1;
+    align-self: center;
+}
+
+.inhale{
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+}
+.inhaleCaption{
+    grid-column: 3 / span 1;
     grid-row: 1/ span 1;
     align-self: center;
 }
@@ -274,9 +264,7 @@ input[type=submit] {
     justify-content: space-around;
     }
 
-    .grid-container img:hover{
-    opacity: 0.75;
-    }
+    
 
     /* .smallGroup{
         min-height: 500px;
@@ -298,7 +286,50 @@ input[type=submit] {
         width: 100%;
     }
 
+    .introPage{
+        display: grid;
+        /* position: relative; */
+        text-align: center;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 10px;
+        align-items: center;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        justify-items: center;
+    } 
     
+    .smallGroup{
+        grid-column: 1/ span 1;
+        max-height: 500px;
+        align-items: center;
+        overflow: hidden;
+        object-fit: cover;
+        grid-row: 1 /  span 2; 
+        
+    }
+    /* .smallgroup2{
+        grid-column: 2/span1;
+        grid-row: 2/span1;
+    } */
+    
+    .aboutCadence{
+        /* position: absolute;
+        margin: 0 auto; */
+        background-color: rgba(255, 255, 255, .85);
+        padding: 30px;
+        color: black;
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        align-self: center;
+        border-radius: 10px;
+        border
+    }  
+     .about2 {
+        grid-column: 2/span 1;
+        grid-row: 2 / span 1;
+        border: solid white 2px;
+        border-radius: 10px;
+     }
 
     .aboutUsText img{
         width: 50%;
@@ -329,7 +360,7 @@ input[type=submit] {
 
 
 @media all and (min-width:1200px){
-    /* still figuring out what to do with desktop view flex nav */
+    
     header {
         flex-direction: row;
         justify-content: space-between;
@@ -342,8 +373,23 @@ input[type=submit] {
     h1{
         text-align: left;
     }
-    
-    
+    .introPage{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .smallGroup{
+        grid-column: 2 /span 1;
+    }
+    .aboutCadence{
+        grid-column: 1 / span 1;
+        grid-row: 1 / -1;
+    }
+
+    .about2{
+        grid-column: 3 / span 1;
+        grid-row: 1/-1;
+    }
       .grid-container{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: repeat(6, 1fr);
@@ -358,6 +404,11 @@ input[type=submit] {
         
     }
     
+    .grid-container img:hover{
+        opacity: 0.75;
+        }
+
+   
 }
 
 @media screen and (prefers-reduced-motion: reduce){
