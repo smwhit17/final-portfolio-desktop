@@ -152,10 +152,10 @@ margin-top: 20px;
     text-align: center;
 /* } */
 
-.aboutCadence{
+/* .aboutCadence{
     border: solid white 2px;
     border-radius: 10px;
-}
+} */
 
 
 h2{
@@ -217,7 +217,7 @@ h2{
     align-self: center;
 }
 
-/* .youtubeButton{
+.YTlink{
     background-color:rgb(185, 233, 255) ;
     border-radius: 20px;
     padding: 15px;
@@ -227,23 +227,28 @@ h2{
     cursor: pointer;
     margin-bottom: 10px;
     box-shadow: 0px 0px 20px 0px rgb(185, 233, 255);
+}
+
+/* button {
+    margin-bottom: 20px;
 } */
 
-button {
-    margin-bottom: 20px;
-}
+/* button > a{
+    margin: -.5em; padding: .5em; position: relative;
+} */
 
 .youTube {
     padding: 1.25em 2em;
+    marign-bottom: 25px;
     background: rgb(227, 244, 252);
     border: 2px solid rgb(61, 121, 148);
     font-family: 'Josefin Sans', sans-serif; 
     font-size: 85%;
     border-radius: 0.75em;
     transform-style: preserve-3d;
-    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
 }
-   .youTube::before {
+.youTube::before {
       position: absolute;
       content: '';
       width: 100%;
@@ -264,7 +269,7 @@ button {
       transform: translate(0, 0.25em);
     }
 
-      .youTube:hover::before {
+    .youTube:hover::before {
         /* box-shadow: 0 0 0 2px rgb(61, 121, 148), 0 0.5em 0 0 rgb(179, 224, 245); */
         transform: translate3d(0, 0.5em, -1em);
       }
@@ -279,9 +284,7 @@ button {
         transform: translate3d(0, 0, -1em);
       }
 
-      button > a{
-          text-decoration: none;
-      }
+
 
 form {
     border: 1px solid #ffffff;
@@ -303,16 +306,17 @@ textarea{
     font-family: 'Josefin Sans', sans-serif; 
     width: 50%;
 }
-input[type=submit] {
-    background-color: white;
+.youTube{
+    /* background-color: white;
     color: black;
     margin: 5px;
-    /* padding: 14px 20px;
-    margin: 8px 0; */
+    padding: 14px 20px;
+    margin: 8px 0;  */
     cursor: pointer;
     width: 25%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px white;
+    margin-bottom: 20px;
+    /* border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px white; */
   }
 
   h1{
@@ -404,14 +408,16 @@ input[type=submit] {
         grid-column: 2 / span 1;
         grid-row: 1 / span 1;
         align-self: center;
-        border-radius: 10px;
+        /* border-radius: 10px; */
         border: none;
     }  
      .about2 {
         grid-column: 2/span 1;
         grid-row: 2 / span 1;
-        border: solid white 2px;
-        border-radius: 10px;
+        background-color: rgba(255, 255, 255, .85);
+        color: black;
+        /* border: solid white 2px;
+        border-radius: 10px; */
      }
 
     .aboutUsText img{
@@ -629,10 +635,13 @@ input[type=submit] {
     }
 
 
-    .grid-container img:hover{
+    .grid-container img{
        opacity: 0.5;
        
         }
+    .grid-container img:hover{
+        opacity: 1;
+    }
 
         /* img:hover .hoverInfo > p {
         grid-row: 1 / span 1;
